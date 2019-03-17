@@ -9,6 +9,7 @@ public class DogTest {
     @Test
     public void testingDogClass() {
         System.out.println("Testing Dog class");
+
         Dog spot = new Dog();
         assertEquals("Spot", spot.getName());
         assertEquals("brown", spot.getFurColor());

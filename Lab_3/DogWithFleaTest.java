@@ -1,6 +1,7 @@
 package cisc181.Lab_3;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class DogWithFleaTest {
@@ -23,16 +24,16 @@ public class DogWithFleaTest {
         assertEquals("red", cliff.getFurColor());
 
         // Initially dog should not have a flea bite
-        assertFalse(cliff.getFleaBite());
+        assertFalse(cliff.hasNewFleaBite());
 
         // Testing setFleaBite
         cliff.setNewFleaBite(true);
-        assertTrue(cliff.getFleaBite());
+        assertTrue(cliff.hasNewFleaBite());
 
         // Testing the getFlea method
         assertTrue(cliff.getFlea() instanceof Flea);
     }
-    /*
+
     @Test
     public void testingFlea(){
         DogWithFlea scratchy = new DogWithFlea();
@@ -48,8 +49,7 @@ public class DogWithFleaTest {
         scratchy.getFlea().biteOwner();
         assertTrue(scratchy.hasNewFleaBite());
     }
-    */
-    /*
+
     @Test
     public void testingSleepAndWag() {
         System.out.println("Testing DogWithFlea sleep and wagTail methods");
@@ -90,8 +90,6 @@ public class DogWithFleaTest {
         assertFalse(cliff.hasNewFleaBite());
         assertEquals(cliff.wagTail(), "wagging tail");
     }
-    */
-    /*
 
     @Test
     public void testingToString() {
@@ -103,5 +101,4 @@ public class DogWithFleaTest {
         Dog puppy = new Dog("Pups", "spotted");
         assertEquals(puppy.toString(), "Pups with spotted fur");
     }
-    */
 }
