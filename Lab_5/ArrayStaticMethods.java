@@ -1,3 +1,8 @@
+/**
+ * Aaron Knestaut
+ * Cisc 181
+ */
+
 package cisc181.Lab_5;
 
 public class ArrayStaticMethods {
@@ -32,30 +37,37 @@ public class ArrayStaticMethods {
     takes an array and two vals, and creates an identical array with all data of val1 replaced with val2
      */
     public static int[] replace(int [] data, int val1, int val2){
-        int[] output = new int[data.length];
-
         for(int i = 0; i < data.length; i++){
             if(data[i] == val1)
-                output[i] = val2;
-            else
-                output[i] = data[1];
+                data[i] = val2;
         }
 
-        return output;
+        return data;
     }
 
+    /*
+    takes an array of ints and puts all zeros at the front
+
+    its not very pretty
+     */
     public static int[] padZeros(int [] data){
         int[] output = new int[data.length];
-        int[] zeros;
-        int[] others;
+        int zeros = 0;
 
-        for(int i = 0; i< data.length; i++){
+        for(int i = 0; i < data.length; i++){
             if(data[i] == 0)
-                zeros[i] = 0;
-            else
-                others[i] = data[i];
+                zeros++;
         }
-
+        for(int i = 0; i < zeros; i++) {
+            output[i] = 0;
+        }
+        int curr = zeros;
+        for(int i = 0; i < data.length; i++){
+            if(data[i] != 0) {
+                output[curr] = data[i];
+                curr++;
+            }
+        }
 
         return output;
     }

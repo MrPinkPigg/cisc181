@@ -26,18 +26,17 @@ public class Lab5TestPartB {
         // add another test case
         assertEquals(5, ArrayStaticMethods.countM("mmAAAHAAHHHHMYMaausebfiuM".toCharArray()));
     }
-/**
+
     @Test
     public void test_replace() {
         System.out.println("Testing replace");
         assertArrayEquals(new int[]{1, 6, 6, 1}, ArrayStaticMethods.replace(new int[]{1, 0, 0, 1}, 0, 6));
         assertArrayEquals(new int[]{5, 5, 5, 5}, ArrayStaticMethods.replace(new int[]{5, 0, 0, 5}, 0, 5));
         assertArrayEquals(new int[]{}, ArrayStaticMethods.replace(new int[]{}, 0, 5));
-        // add a test where no replacements occur
+        assertArrayEquals(new int[]{1, 2, 3, 4}, ArrayStaticMethods.replace(new int[]{1, 2, 3, 4},5, 1));
 
     }
-*/
-/**
+
     @Test
     public void test_padZeros() {
         System.out.println("Testing padZeros");
@@ -45,8 +44,7 @@ public class Lab5TestPartB {
         assertArrayEquals(new int[]{0, 0, 0, 2, 4}, ArrayStaticMethods.padZeros(new int[]{0, 2, 0, 4, 0}));
         assertArrayEquals(new int[]{1}, ArrayStaticMethods.padZeros(new int[]{1}));
         assertArrayEquals(new int[]{}, ArrayStaticMethods.padZeros(new int[]{}));
-        //add 2 tests with: all 0s, no 0s
+        assertArrayEquals(new int[]{0, 0, 0}, ArrayStaticMethods.padZeros(new int[]{0, 0, 0}));
+        assertArrayEquals(new int[]{1, 2, 3}, ArrayStaticMethods.padZeros(new int[]{1, 2, 3}));
     }
- */
-
 }
