@@ -1,6 +1,7 @@
 package cisc181.cp_2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck{
     /*
@@ -19,4 +20,9 @@ public class Deck{
     }
 
     public ArrayList<Integer> getDeck() { return this.deck; }
+
+    public int drawCard(){
+        Collections.shuffle(this.deck);
+        return this.deck.get(0);
+    }
 }

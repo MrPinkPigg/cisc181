@@ -43,7 +43,6 @@ public class TicTacToeUI implements UserInput<TicTacToeTypeGame>{
     public static void main(String args[]){
 
         TicTacToeUI ttt = new TicTacToeUI();
-        boolean gameEnded = false;
         PlacePieceAction nextMove;
 
         while (!ttt.getGame().isEnd()){
