@@ -1,18 +1,44 @@
+/**
+ * Aaron Knestaut
+ * Dylan Kirk
+ *
+ * Cisc181
+ */
+
 package cisc181.cp_2;
 
 import java.util.Scanner;
 
+/*
+the UI class for xxxGame, that takes user input and generally handles running the game
+Parameters:
+    xxxGame game - the game to be played and get input for
+ */
+
 public class xxxUI implements UserInput<xxxGame>{
     private xxxGame game;
 
+    /*
+    default constructor for xxxUI, that creates a new xxxGame
+     */
     public xxxUI(){
         game = new xxxGame();
     }
 
+    /*
+    getters
+     */
     public xxxGame getGame(){
         return game;
     }
 
+    /*
+    gets the user's next move, and returns that move if valid
+    Parameters:
+        xxxGame game - the game to get a move for
+    Returns:
+        PlayerAction - returns the player's valid action
+     */
     public PlayerAction getUserNextMove(xxxGame game){
         Scanner scr = new Scanner(System.in);
         boolean validMove = false;
@@ -37,21 +63,34 @@ public class xxxUI implements UserInput<xxxGame>{
         return move;
     }
 
+    /*
+    the main function, runs the game
+     */
     public static void main(String args[]){
 
         xxxUI ns = new xxxUI();
-        boolean gameEnded = false;
         PlayerAction turn;
 
+        //while the game hasn't ended:
         while (!ns.getGame().isEnd()){
+
             // print status of game
             System.out.println(ns.getGame());
-            // get the next move from the user
+
+            // get the next move from the current player
             turn = ns.getUserNextMove(ns.getGame());
+
             // print the next move
             System.out.println(turn);
+
             // perform the next move
             ns.getGame().performAction(turn);
+
+            //update scores
+            ns.getGame().checkScoring(ns.getGame().getTurn());
+
+            //update turns
+            ns.getGame().updateTurns();
         }
         System.out.println(ns.getGame());
     }
