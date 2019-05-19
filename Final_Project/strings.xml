@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Not Sorry</string>
+    <string name="p1_name">Player 1 Name:</string>
+    <string name="p2_name">Player 2 Name:</string>
+    <string name="start_game">Start</string>
+    <string name="instruction_scroll">The main objective of Not Sorry is to get your two pieces
+    to your home on the board. To do this, a player on their turn will draw a card, and decide
+    which of their pieces to move. You need a 1 or 2 in order to leave start. The NPC pieces will
+    move a piece back to the start if they land on someone, or if that other piece lands on them.
+    2 points are needed to win.</string>
+    <string name="draw_card">Draw Card</string>
+    <string name="drawn_card">drawn card</string>
+    <string name="player_1_name">Player 1</string>
+    <string name="player_2_name">Player 2</string>
+    <string name="empty_space">empty space</string>
+    <string name="p1_1">p1_1</string>
+    <string name="p1_2">p1_2</string>
+    <string name="p2_1">p2_1</string>
+    <string name="p2_2">p2_2</string>
+    <string name="npcB">B</string>
+    <string name="npcG">G</string>
+</resources>
